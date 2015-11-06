@@ -1,31 +1,40 @@
 {
-  "name": "slush-suchkit",
-  "version": "0.0.1",
-  "description": "suchkit template for slush",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "gulp dev --gulpfile bin/gulpfile.js",
-    "build": "gulp prod --gulpfile bin/gulpfile.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+ssh://git@github.com/snailterror/slush-suchkit.git"
-  },
-  "keywords": [
-    "slushgenerator"
-  ],
-  "author": "Adrien Espel",
-  "license": "GPL-3.0",
-  "bugs": {
-    "url": "https://github.com/snailterror/slush-suchkit/issues"
-  },
-  "homepage": "https://github.com/snailterror/slush-suchkit#readme",
-  "dependencies": {
-    "gulp": "^3.9.0",
-    "gulp-conflict": "^0.4.0",
-    "gulp-install": "^0.6.0",
-    "gulp-template": "^3.0.0",
-    "inquirer": "^0.11.0"
-  }
+    "name": "slush-slush-suchkit",
+    "description": "",
+    "version": "0.0.1",
+    "homepage": "https://github.com/snail/slush-slush-suchkit",
+    "author": {
+        "name": "Adrien",
+        "email": "espel.adrien@gmail.com"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git://github.com/snail/slush-slush-suchkit.git"
+    },
+    "bugs": {
+        "url": "https://github.com/snail/slush-slush-suchkit/issues"
+    },
+    "license": "MIT",
+    "main": "slushfile.js",
+    "engines": {
+        "node": ">= 0.10.26",
+        "npm": ">=1.4.3"
+    },
+    "scripts": {
+        "test": "echo \"No tests\""
+    },
+    "dependencies": {
+        "slush": ">=1.0.0",
+        "gulp": "^3.6.2",
+        "gulp-template": "^0.1.1",
+        "gulp-install": "^0.1.4",
+        "gulp-conflict": "^0.1.1",
+        "gulp-rename": "^1.2.0",
+        "underscore.string": "^2.3.3",
+        "inquirer": "^0.8.0",
+        "iniparser": "^1.0.5"
+    },
+    "keywords": [
+        "slushgenerator"
+    ]
 }
