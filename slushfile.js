@@ -79,6 +79,7 @@ gulp.task('default', function (done) {
         name: 'moveon',
         message: 'Continue?'
     }];
+
     //Ask
     inquirer.prompt(prompts,
         function (answers) {
