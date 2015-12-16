@@ -7,7 +7,7 @@ var runSequence = require('run-sequence');
 var config = require('../configs/config.js');
 
 // Tasks
-require('./browserify-prod');
+require('./browserify');
 require('./sass');
 require('./imagemin-prod');
 require('./copy');

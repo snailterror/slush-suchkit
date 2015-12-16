@@ -1,3 +1,4 @@
-/public/javascripts
-/dist
-/node_modules
+node_modules/
+temp
+*.log
+.idea

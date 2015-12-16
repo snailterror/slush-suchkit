@@ -8,24 +8,22 @@ var source     = require('vinyl-source-stream');
 var buffer     = require('vinyl-buffer');
 var browserify = require('browserify');
 var watchify   = require('watchify');
-var reactify   = require('reactify');
 var babelify   = require('babelify');
 var rename     = require('gulp-rename');
+var uglify     = require('gulp-uglify');
 
 var config = require('../configs/config.js');
 
 gulp.task('browserify', function() {
+
     console.log(config.dev.base + 'app.js', config.dev.js);
     var bundler = browserify({
         entries: [config.dev.jsFile],
-        transform: [reactify],
         debug: true,
         cache: {},
         packageCache: {},
         fullPaths: true
-    }).transform(babelify.configure({
-        optional : "es7"
-    }));
+    }).transform(babelify);
 
     var watcher  = watchify(bundler);
 
@@ -42,12 +40,29 @@ gulp.task('browserify', function() {
                 .pipe(gulp.dest(config.dev.js));
             console.log('Updated!', (Date.now() - updateStart) + 'ms');
         })
-        .transform(babelify.configure({
-            optional : "es7"
-        }))
+        .transform(babelify)
         .bundle()
         .on('error', gutil.log.bind(gutil, 'Browserify Error', gutil.colors.red('411')))
         .pipe(source(config.dev.jsFile))
         .pipe(rename('app.js'))
         .pipe(gulp.dest(config.dev.js));
+});
+
+
+gulp.task('browserify-prod', function() {
+
+    var bundler = browserify({
+        entries: [config.dev.jsFile],
+        debug: true,
+        cache: {}, packageCache: {}, fullPaths: true
+    }).transform(babelify);
+
+    bundler
+        .bundle()
+        .on('error', gutil.log.bind(gutil, 'Browserify Error', gutil.colors.red('411')))
+        .pipe(source(config.dev.jsFile))
+        .pipe(buffer())
+        .pipe(uglify())
+        .pipe(rename('app.js'))
+        .pipe(gulp.dest(config.prod.js));
 });
