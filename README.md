@@ -1,14 +1,11 @@
-# Slush Slush-suchkit [![Build Status](https://secure.travis-ci.org/snail/slush-slush-suchkit.png?branch=master)](https://travis-ci.org/snail/slush-slush-suchkit) [![NPM version](https://badge-me.herokuapp.com/api/npm/slush-slush-suchkit.png)](http://badges.enytc.com/for/npm/slush-slush-suchkit)
-
-> 
-
+# slush-suchkit
 
 ## Getting Started
 
-Install `slush-slush-suchkit` globally:
+Install `slush-suchkit` globally:
 
 ```bash
-$ npm install -g slush-slush-suchkit
+$ npm install -g slush-suchkit
 ```
 
 ### Usage
@@ -16,14 +13,30 @@ $ npm install -g slush-slush-suchkit
 Create a new folder for your project:
 
 ```bash
-$ mkdir my-slush-slush-suchkit
+$ mkdir my-project
 ```
 
 Run the generator from within the new folder:
 
 ```bash
-$ cd my-slush-slush-suchkit && slush slush-suchkit
+$ cd my-project && slush suchkit
 ```
+
+
+----------
+
+
+### Run env
+
+Dev env, watch html + js + css files
+
+    $ npm run start
+
+Prod env
+
+    $ npm run build
+
+*Create dist folder with your application*
 
 ## Getting To Know Slush
 
@@ -31,14 +44,10 @@ Slush is a tool that uses Gulp for project scaffolding.
 
 Slush does not contain anything "out of the box", except the ability to locate installed slush generators and to run them with liftoff.
 
-To find out more about Slush, check out the [documentation](https://github.com/slushjs/slush).
-
-## Contributing
-
-See the [CONTRIBUTING Guidelines](https://github.com/snail/slush-slush-suchkit/blob/master/CONTRIBUTING.md)
+To find out more about Slush, check out the [documentation](https://github.com/slushjs/slush).	
 
 ## Support
-If you have any problem or suggestion please open an issue [here](https://github.com/snail/slush-slush-suchkit/issues).
+If you have any problem or suggestion please open an issue [here](https://github.com/snailterror/slush-suchkit/issues).
 
 ## License 
 

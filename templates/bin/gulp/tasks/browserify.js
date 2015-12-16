@@ -10,6 +10,7 @@ var browserify = require('browserify');
 var watchify   = require('watchify');
 var babelify   = require('babelify');
 var rename     = require('gulp-rename');
+var uglify     = require('gulp-uglify');
 
 var config = require('../configs/config.js');
 

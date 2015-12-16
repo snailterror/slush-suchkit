@@ -11,6 +11,6 @@ gulp.task('browsersync', function() {
         }
     });
 
-    gulp.watch([config.dev.base + "*.html", config.dev.css + "*.css", config.dev.js+"*.js"]).on('change', browserSync.reload);
+    gulp.watch([config.dev.sync + "*.html", config.dev.css + "*.css", config.dev.js+"*.js"]).on('change', browserSync.reload);
 
 });
