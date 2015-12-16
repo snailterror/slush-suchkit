@@ -14,6 +14,7 @@ var rename     = require('gulp-rename');
 var config = require('../configs/config.js');
 
 gulp.task('browserify', function() {
+
     console.log(config.dev.base + 'app.js', config.dev.js);
     var bundler = browserify({
         entries: [config.dev.jsFile],
