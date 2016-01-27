@@ -53,8 +53,8 @@ gulp.task('browserify-prod', function() {
 
     var bundler = browserify({
         entries: [config.dev.jsFile],
-        debug: true,
-        cache: {}, packageCache: {}, fullPaths: true
+        debug: false,
+        cache: {}, packageCache: {}, fullPaths: false
     }).transform(babelify);
 
     bundler
