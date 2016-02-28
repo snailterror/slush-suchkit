@@ -1,7 +1,7 @@
 {
-  "name": "slush-suchkit",
-  "version": "0.0.1",
-  "description": "suchkit template for slush",
+  "name": "<%= appName %>",
+  "version": "<%= appVersion %>",
+  "description": "<%= appDescription %>",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -10,17 +10,17 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/snailterror/slush-suchkit.git"
+    "url": "git+ssh://git@github.com/<%= userName %>/<%= appName %>.git"
   },
   "keywords": [
     "slushgenerator"
   ],
-  "author": "Adrien Espel",
+  "author": "<%= authorName %> <<%= authorEmail %>>",
   "license": "GPL-3.0",
   "bugs": {
-    "url": "https://github.com/snailterror/slush-suchkit/issues"
+    "url": "https://github.com/<%= userName %>/<%= appName %>/issues"
   },
-  "homepage": "https://github.com/snailterror/slush-suchkit#readme",
+  "homepage": "https://github.com/<%= userName %>/<%= appName %>#readme",
   "devDependencies": {
     "babelify": "^7.2.0",
     "babel-cli": "^6.1.4",
