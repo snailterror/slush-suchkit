@@ -51,34 +51,45 @@ var defaults = (function () {
 })();
 
 gulp.task('default', function (done) {
-    var prompts = [{
-        name: 'appName',
-        message: 'What is the name of your project?',
-        default: defaults.appName
-    }, {
-        name: 'appDescription',
-        message: 'What is the description?'
-    }, {
-        name: 'appVersion',
-        message: 'What is the version of your project?',
-        default: '0.1.0'
-    }, {
-        name: 'authorName',
-        message: 'What is the author name?',
-        default: defaults.authorName
-    }, {
-        name: 'authorEmail',
-        message: 'What is the author email?',
-        default: defaults.authorEmail
-    }, {
-        name: 'userName',
-        message: 'What is the github username?',
-        default: defaults.userName
-    }, {
-        type: 'confirm',
-        name: 'moveon',
-        message: 'Continue?'
-    }];
+    var prompts = [
+        {
+            name    : 'appType',
+            message : 'What type of generator ?',
+            type    : 'list',
+            choices : [
+                {name: 'basic', value : 'default'},
+                {name: 'React-Redux-Immutable', value : 'react-template'}
+            ],
+            default : 'Basic'
+        },
+        {
+            name: 'appName',
+            message: 'What is the name of your project?',
+            default: defaults.appName
+        }, {
+            name: 'appDescription',
+            message: 'What is the description?'
+        }, {
+            name: 'appVersion',
+            message: 'What is the version of your project?',
+            default: '0.1.0'
+        }, {
+            name: 'authorName',
+            message: 'What is the author name?',
+            default: defaults.authorName
+        }, {
+            name: 'authorEmail',
+            message: 'What is the author email?',
+            default: defaults.authorEmail
+        }, {
+            name: 'userName',
+            message: 'What is the github username?',
+            default: defaults.userName
+        }, {
+            type: 'confirm',
+            name: 'moveon',
+            message: 'Continue?'
+        }];
 
     //Ask
     inquirer.prompt(prompts,
@@ -86,8 +97,9 @@ gulp.task('default', function (done) {
             if (!answers.moveon) {
                 return done();
             }
+
             answers.appNameSlug = _.slugify(answers.appName);
-            gulp.src(__dirname + '/templates/**')
+            gulp.src(__dirname + '/templates/'+answers.appType+'/**')
                 .pipe(template(answers))
                 .pipe(rename(function (file) {
                     if (file.basename[0] === '_') {
