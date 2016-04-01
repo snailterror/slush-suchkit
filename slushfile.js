@@ -58,7 +58,8 @@ gulp.task('default', function (done) {
             type    : 'list',
             choices : [
                 {name: 'basic', value : 'default'},
-                {name: 'React-Redux-Immutable', value : 'react-template'}
+                {name: 'React-Redux-Immutable', value : 'react-template'},
+                {name: 'Sass-dev', value : 'sass-dev'}
             ],
             default : 'Basic'
         },
