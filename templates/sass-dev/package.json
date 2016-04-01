@@ -1,0 +1,32 @@
+{
+  "name": "<%= appName %>",
+  "version": "<%= appVersion %>",
+  "description": "<%= appDescription %>",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "gulp dev --gulpfile bin/gulpfile.js",
+    "build": "gulp prod --gulpfile bin/gulpfile.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/<%= userName %>/<%= appName %>.git"
+  },
+  "keywords": [
+    "slushgenerator"
+  ],
+  "author": "<%= authorName %> <<%= authorEmail %>>",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/<%= userName %>/<%= appName %>/issues"
+  },
+  "homepage": "https://github.com/<%= userName %>/<%= appName %>#readme",
+  "devDependencies": {
+    "browser-sync": "^2.8.2",
+    "gulp": "^3.9.0",
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-sass": "^2.0.1",
+    "gulp-util": "^3.0.6",
+    "run-sequence": "^1.1.1"
+  }
+}
