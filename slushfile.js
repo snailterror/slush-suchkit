@@ -58,6 +58,7 @@ gulp.task('default', function (done) {
             type    : 'list',
             choices : [
                 {name: 'basic', value : 'default'},
+                {name: 'Typescript (no css, no images)', value : 'typescript'},
                 {name: 'React-Redux-Immutable', value : 'react-template'},
                 {name: 'Sass-dev', value : 'sass-dev'}
             ],

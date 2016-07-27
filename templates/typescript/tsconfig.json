@@ -1,0 +1,15 @@
+{
+
+  "compilerOptions" : {
+    "target": "es5",
+    "pretty": true,
+    "outDir": "./public/javascripts"
+  },
+
+  "files" : [
+    "./app/app.ts"
+  ],
+
+  "excluse" : ["node_modules"]
+
+}
