@@ -3,7 +3,7 @@
   "compilerOptions" : {
     "target": "es5",
     "pretty": true,
-    "outDir": "./public/javascripts"
+    "outDir": "./tsbuild/"
   },
 
   "files" : [

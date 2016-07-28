@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "tsc -w;",
+    "tsWatch": "tsc -w",
+    "browserifyWatch": "gulp dev --gulpfile bin/gulpfile.js",
+    "start": "concurrently --kill-others 'npm run tsWatch' 'npm run browserifyWatch'",
     "build": "gulp prod --gulpfile bin/gulpfile.js"
   },
   "repository": {
@@ -30,6 +32,7 @@
     "browserify": "^10.2.4",
     "gulp": "^3.9.0",
     "gulp-rename": "^1.2.2",
+    "concurrently": "^2.2.0",
     "gulp-uglify": "^1.2.0",
     "gulp-util": "^3.0.6",
     "run-sequence": "^1.1.1",
