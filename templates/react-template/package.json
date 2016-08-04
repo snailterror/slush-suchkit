@@ -32,6 +32,7 @@
     "browserify": "^10.2.4",
     "chai": "^3.4.1",
     "chai-immutable": "^1.5.2",
+    "envify": "^3.4.1",
     "gulp": "^3.9.0",
     "gulp-autoprefixer": "^3.1.0",
     "gulp-imagemin": "^2.3.0",

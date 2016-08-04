@@ -11,6 +11,7 @@ var watchify   = require('watchify');
 var babelify   = require('babelify');
 var rename     = require('gulp-rename');
 var uglify     = require('gulp-uglify');
+var envify     = require('envify');
 
 var config = require('../configs/config.js');
 
@@ -54,8 +55,9 @@ gulp.task('browserify-prod', function() {
     var bundler = browserify({
         entries: [config.dev.jsFile],
         debug: true,
-        cache: {}, packageCache: {}, fullPaths: true
-    }).transform(babelify);
+        cache: {}, packageCache: {}, fullPaths: true,
+        'transform': [[babelify], ['envify', {'global': true, NODE_ENV: 'production'}]]
+    });
 
     bundler
         .bundle()
