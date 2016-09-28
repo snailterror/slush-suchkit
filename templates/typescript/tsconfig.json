@@ -3,13 +3,19 @@
   "compilerOptions" : {
     "target": "es5",
     "pretty": true,
-    "outDir": "./tsbuild/"
+    "outDir": "./app/js/",
+    "module": "commonjs",
+    "noImplicitAny": true,
+    "removeComments": true,
+    "preserveConstEnums": true,
+    "sourceMap": true
   },
 
   "files" : [
-    "./app/app.ts"
+    "./app/app.ts",
   ],
 
-  "excluse" : ["node_modules"]
+  "excluse" : ["node_modules"],
+  "compileOnSave": false
 
 }
