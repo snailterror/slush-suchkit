@@ -2,8 +2,8 @@ module.exports = {
     "dev": {
         "base": "../",
         "sync": "../public/",
-        "jsFile" : "../public/javascripts/app.js",
-        "js": "../public/javascripts/"
+        "jsFile" : "../app/js/app.js",
+        "js": "../build/"
     },
     "prod": {
         "base": "../dist/",
