@@ -38,18 +38,30 @@ Prod env
 
 *Create dist folder with your application*
 
+### Typescript react
+
+After command
+
+    $ npm run start
+
+You need to install typings dependencies with this command :
+
+    $ npm run typingsDependencies
+
+You can now start your project =D
+
 ## Getting To Know Slush
 
 Slush is a tool that uses Gulp for project scaffolding.
 
 Slush does not contain anything "out of the box", except the ability to locate installed slush generators and to run them with liftoff.
 
-To find out more about Slush, check out the [documentation](https://github.com/slushjs/slush).	
+To find out more about Slush, check out the [documentation](https://github.com/slushjs/slush).
 
 ## Support
 If you have any problem or suggestion please open an issue [here](https://github.com/snailterror/slush-suchkit/issues).
 
-## License 
+## License
 
 The MIT License
 
@@ -75,4 +87,3 @@ HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
 WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
 FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
 OTHER DEALINGS IN THE SOFTWARE.
-

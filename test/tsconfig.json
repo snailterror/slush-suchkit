@@ -8,11 +8,13 @@
     "noImplicitAny": true,
     "removeComments": true,
     "preserveConstEnums": true,
-    "sourceMap": true
+    "sourceMap": true,
+    "jsx": "react"
   },
 
   "files" : [
     "./app/app.ts",
+    "typings/index.d.ts"
   ],
 
   "excluse" : ["node_modules"],
