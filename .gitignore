@@ -3,3 +3,4 @@ temp
 *.log
 .idea
 /test_reloader
+/test
