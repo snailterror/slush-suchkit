@@ -14,7 +14,11 @@ gulp.task("typedocs", function() {
             target: "es5",
             out: config.doc.dest,
             name: config.doc.name,
-            readme: config.doc.readme
+            readme: config.doc.readme,
+            excludeExternals: true,
+            includeDeclarations: true,
+            ignoreCompilerErrors: true,
+            version: true
         }));
 });
 
