@@ -60,6 +60,7 @@ gulp.task('default', function (done) {
                 {name: 'basic', value : 'default'},
                 {name: 'Typescript (no css, no images)', value : 'typescript'},
                 {name: 'Typescript-React', value : 'typescript-react'},
+                {name: 'Typescript-React-Webpack', value : 'typescript-react-webpack'},
                 {name: 'React-Redux-Immutable', value : 'react-template'},
                 {name: 'Sass-dev', value : 'sass-dev'}
             ],
